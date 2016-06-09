@@ -42,7 +42,18 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="../../index.html">Rain Rate Estimator</a>
+          <a class="navbar-brand" href="../../index.html">Rainfall Estimation</a>
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="../../index.html">Home</a></li>
+                <!--<li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li> -->
+                <li  class="active"><a href="index.html">Estimation</a></li>
+                <li><a href="../../FinalReport.pdf" target="_blank">Report</a></li>
+
+               </ul>
         </div>
         <!-- <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -64,10 +75,9 @@
           <ul class="nav nav-sidebar">
             <li><a href="#ds">Dataset</a></li>
             <li><a href="#pp">Preprocess</a></li>
-            <li><a href="#xgb">XGBoost</a></li>
             <li><a href="#rf">Random Forest</a></li>
-            <li><a href="#ibk">k-nearest neighbors</a></li>
-            <li><a href="#">View on Github</a></li>
+            <li><a href="#xgb">XGBoost</a></li>
+            <li><a href="#ibk">IBk</a></li>
           </ul>
           <!-- <ul class="nav nav-sidebar">
             <li><a href="">Nav item</a></li>
@@ -132,27 +142,37 @@
           <div class="preprocess">
             <p>Our data set is too big and it contains many blank due to some reason in measurement, so we have to do data preprocessing for our training. Our strategy is to calculate the mean value for each attribute to generate one observation for each id to make our data more clear and succinct. Also, we will discard some ids with too many blanks or a too big expected rainfall(over 70).</p>
 
-            <p>In our training and validation, we use ten­fold cross validation to gain the accuracy. We firstly separate our data into ten equal parts, and then use 9 of them for training and the remain one for validation. We use MAE(Mean Absolute Difference) to calculate the difference between our output and the expected value in rainfall to estimate our accuracy.</p>
-          </div>
-          <h2 class="sub-header" id="xgb">XGBoost</h2>
-          <div class="rf-result" style="width: 80%; margin:auto">
-            <img src="../../images/xgboostr.png" class="img-responsive" alt="Generic placeholder thumbnail">
-            <img src="../../images/0.7xgboost+0.3dbz.png" class="img-responsive" alt="Generic placeholder thumbnail">
-            <img src="../../images/xgboost_result.png" class="img-responsive" alt="Generic placeholder thumbnail">
+            <p>In our training and validation, we use ten­ fold cross validation to gain the accuracy. We firstly separate our data into ten equal parts, and then use 9 of them for training and the remain one for validation. We use MAE(Mean Absolute Difference) to calculate the difference between our output and the expected value in rainfall to estimate our accuracy.</p>
           </div>
 
           <h2 class="sub-header" id="rf">Random Forest</h2>
           <div class="rf-result" style="width: 80%; margin:auto">
             <img src="../../images/ref.jpg" class="img-responsive" alt="Generic placeholder thumbnail">
+            <p class = "test" style = "text-align:center;">Ref</p>
             <img src="../../images/Ref+Zdr+Kdp.jpg" class="img-responsive" alt="Generic placeholder thumbnail">
+            <p class = "test" style = "text-align:center;">Ref + Zdr + Kdp</p>
             <img src="../../images/0.5dBZ+0.5RZK.jpg" class="img-responsive" alt="Generic placeholder thumbnail">
+            <p class = "test" style = "text-align:center;">0.5 dBZ + 0.5 RZK</p>
             <img src="../../images/07dBZ03RZK.jpg" class="img-responsive" alt="Generic placeholder thumbnail">
+            <p class = "test" style = "text-align:center;">0.7 dBZ + 0.3 RZK</p>
             <img src="../../images/random_result.jpg" class="img-responsive" alt="Generic placeholder thumbnail">
+            <p class = "test" style = "text-align:center;">comparison of different implementations of Random Forest</p>
           </div>
 
-          <h2 class="sub-header" id="ibk">k-nearest neighbors</h2>
+          <h2 class="sub-header" id="xgb">XGBoost</h2>
+          <div class="rf-result" style="width: 80%; margin:auto">
+            <img src="../../images/xgboostr.png" class="img-responsive" alt="Generic placeholder thumbnail">
+            <p class = "test" style = "text-align:center;">XGBoost</p>
+            <img src="../../images/0.7xgboost+0.3dbz.png" class="img-responsive" alt="Generic placeholder thumbnail">
+            <p class = "test" style = "text-align:center;">0.7 XGBoost + 0.3 dBZ</p>
+            <img src="../../images/xgboost_result.png" class="img-responsive" alt="Generic placeholder thumbnail">
+            <p class = "test" style = "text-align:center;">compariaon of different implementations of XGBoost</p>
+          </div>
+
+          <h2 class="sub-header" id="ibk">IBk</h2>
           <div class="rf-result" style="width: 80%; margin:auto">
             <img src="../../images/ibk.png" class="img-responsive" alt="Generic placeholder thumbnail">
+            <p class = "test" style = "text-align:center;">IBk</p>
           </div>
         </div>
       </div>

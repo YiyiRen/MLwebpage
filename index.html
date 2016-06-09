@@ -45,14 +45,14 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="index.html">Rain Rate Estimator</a>
+              <a class="navbar-brand" href="index.html">Rainfall Estimation</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
+                <li class="active"><a href="index.html">Home</a></li>
                 <!--<li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li> -->
-                <li><a href="dashboard/dashboard/index.html">Estimator</a></li>
+                <li><a href="dashboard/dashboard/index.html">Estimation</a></li>
                 <li><a href="FinalReport.pdf" target="_blank">Report</a></li>
                 <!-- <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
@@ -89,9 +89,9 @@
           <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>QPE.</h1>
+              <h1>QPE</h1>
               <p>Our project is a radar-based Quantitative Precipitation Estimates (QPE) problem, estimating the hourly rainfall by using data collected from the radar. Our project can help to estimate the rainfall via radar observations, which is cheap and feasible.</p>
-              <p><a class="btn btn-lg btn-primary" href="dashboard/dashboard/index.html" role="button">Explore it!</a></p>
+              <p><a class="btn btn-lg btn-primary" href="dashboard/dashboard/index.html" role="button">Explore It</a></p>
             </div>
           </div>
         </div>
@@ -99,8 +99,8 @@
           <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Solution.</h1>
-              <p>We provide some solutions to estimate rain rate based on the radar measurements data. We analyze the results of different methods (e.g. XGBoost and Random Forest) and compare their performance.</p>
+              <h1>Solution</h1>
+              <p>We provide some solutions to estimate rainfall based on the radar measurements. We analyze the results of different methods (e.g. Random Forest, XGBoost and IBk) and compare their performances.</p>
               <p><a class="btn btn-lg btn-primary" href="#" role="button">View Report</a></p>
             </div>
           </div>
@@ -109,7 +109,7 @@
           <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Sample data.</h1>
+              <h1>Sample Data</h1>
               <p>If you are interested in the data we used for estimation, check it  by yourself! You can read the explanation of the attributes in the data from our report if you have problems.</p>
               <p><a class="btn btn-lg btn-primary" href="#" target="_blank" role="button">Download Data</a></p>
             </div>
@@ -138,7 +138,7 @@
         <div class="col-lg-4">
           <img class="img-circle" src="images/xgboost.png" alt="Generic placeholder image" width="140" height="140">
           <h2>XGBoost</h2>
-          <p>XGBoost is short for “Extreme Gradient Boosting”, where the term “Gradient Boosting” is proposed in the paper <a class="ref1" href="https://statweb.stanford.edu/~jhf/ftp/trebst.pdf" target="_blank">Greedy Function Approximation: A Gradient Boosting Machine</a>, by Friedman. XGBoost is based on this original model.</p>
+          <p>XGBoost is short for “Extreme Gradient Boosting”, where the term “Gradient Boosting” is firstly proposed in the paper <a class="ref1" href="https://statweb.stanford.edu/~jhf/ftp/trebst.pdf" target="_blank">Greedy Function Approximation: A Gradient Boosting Machine</a>, by Friedman. XGBoost is based on this original model.</p>
           <p><a class="btn btn-default" href="http://xgboost.readthedocs.io/en/latest/model.html" target="_blank" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
@@ -162,8 +162,8 @@
 
       <div class="row featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading">Motivation. <span class="text-muted">Why Rain Estimator?</span></h2>
-          <p class="lead">It’s important to know how much it rained on a particular field, especially for agriculture, but rainfall is variable in space and time and it’s impossible to use rain gauges everywhere. Therefore, an alternative way is using the information gathered via radar observations, which is cheap and abundant for training to infer actual total rainfall.</p>
+          <h2 class="featurette-heading">Motivation. <span class="text-muted">Why Rainfall Estimation?</span></h2>
+          <p class="lead">In our daily life, it’s very important to know how much it rained on a particular field, especially for agriculture, but rainfall is variable in space and time and it’s hard to use rain gauges everywhere for estimation. Therefore, an alternative way is using the information gathered from radar for estimation, which is cheap and abundant for training to infer actual total rainfall.</p>
         </div>
         <div class="col-md-5">
           <img class="featurette-image img-responsive center-block" src="images/radar.png" alt="Generic placeholder image" width="200" height="200">
@@ -176,7 +176,7 @@
       <div class="row featurette">
         <div class="col-md-7 col-md-push-5">
           <h2 class="featurette-heading">Methods. <span class="text-muted">How to choose?</span></h2>
-          <p class="lead">The classification algorithms we choose are Random Forests(RF) and Gradient Boosted Trees(GBDT). We choose Random Forest because our training data has many attributes, so a normal decision tree will be easily overfitting. As for GBDT, it is a new machine learning method which usually performs well in many problems.</p>
+          <p class="lead">The classification algorithms we choose are Random Forests, XGBoost and IBk. We choose Random Forest because our training data has many attributes, so a normal decision tree will be easily overfitting. As for XGBoost, it is a new machine learning method which usually performs well in value estimation. And IBk is the easiest way for implementation in such problem.</p>
         </div>
         <div class="col-md-5 col-md-pull-7">
           <img class="featurette-image img-responsive center-block" src="images/question-mark.png" alt="Generic placeholder image" width="200" height="200">
@@ -190,7 +190,7 @@
       <div class="row featurette">
         <div class="col-md-7">
           <h2 class="featurette-heading">Results. <span class="text-muted">Best method?</span></h2>
-          <p class="lead">Both XGBoost and Random Forest does well on esimation. According to results, XGBoost is slightly better than Random Forest. Neural net work may have a better performance, as it has shown its power in many applicaitons, however, we didn't implement it.</p>
+          <p class="lead">Both XGBoost and Random Forest does well on esimation. According to results, XGBoost is slightly better than Random Forest. But IBk has the best result along with the easiest implementation.</p>
         </div>
         <div class="col-md-5">
           <img class="featurette-image img-responsive center-block" src="images/best.jpg" alt="Generic placeholder image">
@@ -235,7 +235,7 @@
       <!-- FOOTER -->
       <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2015 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        <p>2016 EECS 349</p>
       </footer>
 
     </div><!-- /.container -->
