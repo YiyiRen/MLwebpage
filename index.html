@@ -53,7 +53,7 @@
                 <!--<li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li> -->
                 <li><a href="dashboard/dashboard/index.html">Estimator</a></li>
-                <li><a href="#contact">Report</a></li>
+                <li><a href="hw8.pdf" target="_blank">Report</a></li>
                 <!-- <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
                   <ul class="dropdown-menu">
@@ -89,9 +89,9 @@
           <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>One</h1>
-              <p>.</p>
-              <p><a class="btn btn-lg btn-primary" href="dashboard/dashboard/index.html" role="button">Try It Now!</a></p>
+              <h1>PQE.</h1>
+              <p>Our project is a radar-based Quantitative Precipitation Estimates (QPE) problem, estimating the hourly rainfall by using data collected from the radar. Our project can help to estimate the rainfall via radar observations, which is cheap and feasible.</p>
+              <p><a class="btn btn-lg btn-primary" href="dashboard/dashboard/index.html" role="button">Explore it!</a></p>
             </div>
           </div>
         </div>
@@ -99,8 +99,8 @@
           <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Two.</h1>
-              <p>.</p>
+              <h1>Solution.</h1>
+              <p>We provide some solutions to estimate rain rate based on the radar measurements data. We analyze the results of different methods (e.g. XGBoost and Random Forest) and compare their performance.</p>
               <p><a class="btn btn-lg btn-primary" href="#" role="button">View Report</a></p>
             </div>
           </div>
@@ -109,9 +109,9 @@
           <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Three</h1>
-              <p>.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Source Code</a></p>
+              <h1>Sample data.</h1>
+              <p>If you are interested in the data we used for estimation, check it  by yourself! You can read the explanation of the attributes in the data from our report if you have problems.</p>
+              <p><a class="btn btn-lg btn-primary" href="hw8.pdf.zip" target="_blank" role="button">Download Data</a></p>
             </div>
           </div>
         </div>
@@ -137,21 +137,21 @@
       <div class="row">
         <div class="col-lg-4">
           <img class="img-circle" src="images/xgboost.png" alt="Generic placeholder image" width="140" height="140">
-          <h2>Xgboost</h2>
-          <p>blabla.</p>
-          <p><a class="btn btn-default" href="dashboard/dashboard/index.html" role="button">View details &raquo;</a></p>
+          <h2>XGBoost</h2>
+          <p>XGBoost is short for “Extreme Gradient Boosting”, where the term “Gradient Boosting” is proposed in the paper <a class="ref1" href="https://statweb.stanford.edu/~jhf/ftp/trebst.pdf" target="_blank">Greedy Function Approximation: A Gradient Boosting Machine</a>, by Friedman. XGBoost is based on this original model.</p>
+          <p><a class="btn btn-default" href="http://xgboost.readthedocs.io/en/latest/model.html" target="_blank" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
           <img class="img-circle" src="images/randomForest.png" alt="Generic placeholder image" width="140" height="140">
-          <h2>Random forest</h2>
-          <p>blabla.</p>
-          <p><a class="btn btn-default" href="dashboard/dashboard/index.html" role="button">View details &raquo;</a></p>
+          <h2>Random Forest</h2>
+          <p>Random forests is a notion of the general technique of random decision forests that are an ensemble learning method for classification, regression and other tasks, that operate by constructing a multitude of decision trees at training time.</p>
+          <p><a class="btn btn-default" href="https://en.wikipedia.org/wiki/Random_forest" target="_blank" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="images/NN.png" alt="Generic placeholder image" width="140" height="140">
-          <h2>Neural Network</h2>
-          <p>blabla.</p>
-          <p><a class="btn btn-default" href="dashboard/dashboard/index.html" role="button">View details &raquo;</a></p>
+          <img class="img-circle" src="images/knn.png" alt="Generic placeholder image" width="140" height="140">
+          <h2>Nearest Neighbor</h2>
+          <p>k-Nearest Neighbors algorithm (or k-NN for short) is a type of instance-based learning, or lazy learning, where the function is only approximated locally and all computation is deferred until classification. We will use IBk nearest neighbor method.</p>
+          <p><a class="btn btn-default" href="https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm" target="_blank" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
 
@@ -163,41 +163,74 @@
       <div class="row featurette">
         <div class="col-md-7">
           <h2 class="featurette-heading">Motivation. <span class="text-muted">Why Rain Estimator?</span></h2>
-          <p class="lead">blabla.</p>
+          <p class="lead">It’s important to know how much it rained on a particular field, especially for agriculture, but rainfall is variable in space and time and it’s impossible to use rain gauges everywhere. Therefore, an alternative way is using the information gathered via radar observations, which is cheap and abundant for training to infer actual total rainfall.</p>
         </div>
         <div class="col-md-5">
           <img class="featurette-image img-responsive center-block" src="images/radar.png" alt="Generic placeholder image" width="200" height="200">
         </div>
       </div>
+      <p class="pull-right"><a href="#">Back to top</a></p>
 
       <hr class="featurette-divider">
 
       <div class="row featurette">
         <div class="col-md-7 col-md-push-5">
-          <h2 class="featurette-heading">Methods. <span class="text-muted">Compare.</span></h2>
-          <p class="lead">blabla.</p>
+          <h2 class="featurette-heading">Methods. <span class="text-muted">How to choose?</span></h2>
+          <p class="lead">The classification algorithms we choose are Random Forests(RF) and Gradient Boosted Trees(GBDT). We choose Random Forest because our training data has many attributes, so a normal decision tree will be easily overfitting. As for GBDT, it is a new machine learning method which usually performs well in many problems.</p>
         </div>
         <div class="col-md-5 col-md-pull-7">
-          <img class="featurette-image img-responsive center-block" src="images/questionMark.png" alt="Generic placeholder image" width="200" height="200">
+          <img class="featurette-image img-responsive center-block" src="images/question-mark.png" alt="Generic placeholder image" width="200" height="200">
         </div>
       </div>
+
+      <p class="pull-right"><a href="#">Back to top</a></p>
 
       <hr class="featurette-divider">
 
       <div class="row featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading">Results. <span class="text-muted">Something.</span></h2>
-          <p class="lead">blabla.</p>
+          <h2 class="featurette-heading">Results. <span class="text-muted">Best method?</span></h2>
+          <p class="lead">Both XGBoost and Random Forest does well on esimation. According to results, XGBoost is slightly better than Random Forest. Neural net work may have a better performance, as it has shown its power in many applicaitons, however, we didn't implement it.</p>
         </div>
         <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+          <img class="featurette-image img-responsive center-block" src="images/best.jpg" alt="Generic placeholder image">
         </div>
       </div>
 
+      <p class="pull-right"><a href="#">Back to top</a></p>
+
       <hr class="featurette-divider">
+
+      <div class="row" style="margin-top:-40px; margin-bottom:40px">
+          <p class="text-center" style="font-size:20px; color: #A8A8A8;">Team</p>
+      </div>
 
       <!-- /END THE FEATURETTES -->
 
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+          <div class="col-lg-4">
+              <h3>Rui Liao</h3>
+              <p>Master of Computer Science, Northwestern University.</br>
+              <a href="mailto:ruiliao2015@u.northwestern.edu">Email me</a></p>
+          </div>
+          <!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+              <h3>Yiyi Ren</h3>
+              <p>Master of Computer Science, Northwestern University.</br>
+              <a href="mailto:yiyiren2015@u.northwestern.edu">Email me</a></p>
+          </div>
+          <!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+              <h3>Ye Xue</h3>
+              <p>Master of Computer Science, Northwestern University.</br>
+              <a href="mailto:ye@u.northwestern.edu">Email me</a></p>
+          </div>
+          <!-- /.col-lg-4 -->
+      </div>
+      <!-- /.row -->
+
+      <hr class="featurette-divider">
 
       <!-- FOOTER -->
       <footer>
